@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar  APP名稱列背景色 -->
+        <item name="colorPrimary">#1fab89</item>
+        <!--   darker variant for the status bar and contextual app bars最上方狀態列背景色 -->
+        <item name="colorPrimaryDark">#1fab89</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#1fab89</item>
+
+
+        <!-- This is the styling for action bar -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <!--To change the text styling of options menu items</item>-->
+        <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
+        <!--To change the background of options menu-->
+        <item name="android:itemBackground">#1fab89</item>
+    </style>
+
+
+    <!-- MyActionBa背景顏色設定-->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:itemBackground">#1fab89</item>
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+    </style>
+
+    <!-- MyActionBa 左方程式名稱字形顏色-->
+    <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#b5ff7d</item>
+    </style>
+
+    <!-- MyActionBa 左方程式名稱字形顏色 -->
+    <style name="MyActionBar.MenuTextStyle"
+        parent="style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#f2f2f2</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 登入頁背景 -->
+    <style name="login" >
+        <item name="android:background">@drawable/login</item>
+    </style>
+    <!-- 一般頁背景 -->
+    <style name="bg101" >
+        <item name="android:background">@drawable/bg101</item>
+    </style>
+    <!-- 遊戲頁背景 -->
+    <style name="game" >
+        <item name="android:background">@drawable/game</item>
+    </style>
+
+
+
+</resources>

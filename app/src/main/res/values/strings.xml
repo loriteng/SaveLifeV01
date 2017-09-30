@@ -1,0 +1,121 @@
+<resources>
+    <string name="title_activity_play_game">PlayGame</string>
+    <string name="app_name">SAVE LIFE</string>
+    <string name="LvSet">難度選擇</string>
+    <string name="TimeSet">時間選擇</string>
+    <string name="DCBtton">難度設定確認</string>
+    <string name="BHButton">返回首頁</string>
+    <string name="UserName">冒險者</string>
+    <string name="SetUp">設定</string>
+    <string name="Clear">過關</string>
+    <string name="reset">重新遊戲</string>
+
+    <string name="exit">太可惜了! 就差那麼一點,再嘗試看看吧!</string>
+    <string name="GameFinish">任務失敗!</string>
+
+    <string name="ok">確認</string>
+    <string name="cancel">取消</string>
+    <string name="erro">錯誤</string>
+    <string name="setup_name">Project_setup</string>
+    <string name="okay">確定</string>
+    <string name="clean_record">執行重置後，所有資料將會清除，確定執行嗎？</string>
+    <string name="no_idea">沒意見</string>
+
+    <string name="button_text1">資料重置</string>
+    <string name="button_text6">版權說明</string>
+    <string name="button_text7">遊戲設定</string>
+
+
+    <string name="main">讓我們來一起拯救瀕臨絕種動物吧!!</string>
+    <string name="guest">冒險家：</string>
+    <string name="username">請輸入您的名字</string>
+
+    <string name="user01">未創建帳號</string>
+    <string name="user02">未創建帳號</string>
+    <string name="user03">未創建帳號</string>
+    <string name="BEnter">進入遊戲</string>
+
+    <string name="intro">準備好展開奇妙旅程了嗎?</string>
+    <string name="Bstart">開始遊戲</string>
+    <string name="BCopyright">版權說明</string>
+    <string name="BGallery">動物圖鑑</string>
+    <string name="BSetup">遊戲設定</string>
+    <string name="BYoho">開發者選項</string>
+
+    <string-array name="gs">
+        <item>音量設定</item>
+        <item>資料重置</item>
+    </string-array>
+
+    <string-array name="crl">
+        <item>資料出處</item>
+        <item>製作團隊</item>
+    </string-array>
+
+    <string-array name="lsary">
+        <item>簡單(4x5)</item>
+        <item>普通(4x6)</item>
+        <item>困難(4x7)</item>
+    </string-array>
+
+    <string-array name="items">
+        <item>90</item>
+        <item>60</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="tsary">
+        <item>90秒</item>
+        <item>60秒</item>
+        <item>30秒</item>
+    </string-array>
+    <string name="title_activity_new_user">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <!-- for gallery-->
+    <string name="logo1">我是大象</string>
+    <string name="logo2">我還是大象</string>
+    <string name="logo3">我是狼</string>
+    <string name="logo4">
+臺灣黑熊（學名：Ursus thibetanus formosanus、布農語：tumaz、賽夏語：som開發導致棲息地喪失，臺灣黑熊的數量在下降中。在1989年依照臺灣《野生動物保育法》，台灣黑熊被列為瀕危。2001年台灣黑熊被選為台灣最具代表性的野生動物，在不少台灣公司、企業、地方政府等，都選用台灣黑熊作為吉祥物、代表物，是著名的台灣意象之一。</string>
+    <string name="logo5">logo5</string>
+    <string name="logo6">logo6</string>
+    <string name="logo7">logo7</string>
+    <string name="logo8">logo8</string>
+    <string name="logo9">logo9</string>
+    <string name="logo10">logo10</string>
+    <string name="logo11">logo11</string>
+    <string name="logo12">logo12</string>
+    <string name="logo13">logo13</string>
+    <string name="logo14">logo14</string>
+    <string name="logo15">logo15</string>
+    <string name="logo16">logo16</string>
+    <string name="logo17">logo17</string>
+    <string name="logo18">logo18</string>
+    <string name="logo19">logo19</string>
+    <string name="logo20">logo20</string>
+
+    <string name="menu_gallery">動物圖鑑</string>
+    <string name="menu_volume">聲音調整</string>
+    <string name="menu_reset">資料重置</string>
+    <string name="menu_copyright">資料出處</string>
+    <string name="menu_developer">製作團隊</string>
+
+    <string name="reset_info">資料重置</string>
+    <string name="copyright_info">網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n\n網站名：\n網址：\n</string>
+    <string name="developer_info">崇憲\n\n崇文\n\n彥顯\n\n維隆\n\n琇晴</string>
+
+</resources>

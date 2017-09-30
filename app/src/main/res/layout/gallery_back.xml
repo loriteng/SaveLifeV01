@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView 
+        android:id="@+id/gallery_back"
+        android:layout_width="90dip"
+        android:layout_height="90dip"
+        android:src="@drawable/galleryback" />
+
+</FrameLayout>
+

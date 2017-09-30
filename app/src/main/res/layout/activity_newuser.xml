@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:touchscreenBlocksFocus="false">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="1dp"
+        android:stretchColumns="1"
+        android:layout_weight="0.04"
+        android:background="@drawable/retangle_drawable">
+
+        <TableRow>
+            <TextView
+                android:text="帳號名稱"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+            <EditText
+                android:id="@+id/username__edit"
+                android:hint="@string/username"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:maxLength="5"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="0"
+        android:paddingTop="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="1dp"
+        android:background="@drawable/retangle_drawable">
+        <Button
+            android:id="@+id/bcancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:onClick="clickCancel"  />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@android:string/ok"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:onClick="clickOk"
+            android:id="@+id/bok" />
+    </LinearLayout>
+
+</LinearLayout>
