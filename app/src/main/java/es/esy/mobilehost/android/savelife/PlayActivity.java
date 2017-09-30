@@ -494,102 +494,102 @@ public class PlayActivity extends AppCompatActivity {
                 case 1:
                     userData.setAnimalCard_1("1");
                     setIntData("a01",1);
-                    get_animal_message = "石虎\n";
+                    get_animal_message = "歐亞水獺\n";
                     break;
                 case 2:
                     userData.setAnimalCard_2("2");
                     setIntData("a02",2);
-                    get_animal_message = get_animal_message + "歐亞水獺\n";
+                    get_animal_message = get_animal_message + "台灣長鬃山羊\n";
                     break;
                 case 3:
                     userData.setAnimalCard_3("3");
                     setIntData("a03",3);
-                    get_animal_message = get_animal_message + "台灣長鬃山羊\n";
+                    get_animal_message = get_animal_message + "臺灣水鹿\n";
                     break;
                 case 4:
                     userData.setAnimalCard_4("4");
                     setIntData("a04",4);
-                    get_animal_message = get_animal_message + "臺灣水鹿\n";
+                    get_animal_message = get_animal_message + "食蟹獴\n";
                     break;
                 case 5:
                     userData.setAnimalCard_5("5");
                     setIntData("a05",5);
-                    get_animal_message = get_animal_message + "食蟹獴\n";
+                    get_animal_message = get_animal_message + "麝貓\n";
                     break;
                 case 6:
                     userData.setAnimalCard_6("6");
                     setIntData("a06",6);
-                    get_animal_message = get_animal_message + "麝貓\n";
+                    get_animal_message = get_animal_message + "台灣穿山甲\n";
                     break;
                 case 7:
                     userData.setAnimalCard_7("7");
                     setIntData("a07",7);
-                    get_animal_message = get_animal_message + "台灣穿山甲\n";
+                    get_animal_message = get_animal_message + "山羌\n";
                     break;
                 case 8:
                     userData.setAnimalCard_8("8");
                     setIntData("a08",8);
-                    get_animal_message = get_animal_message + "山羌\n";
+                    get_animal_message = get_animal_message + "台灣小黃鼠狼\n";
                     break;
                 case 9:
                     userData.setAnimalCard_9("9");
                     setIntData("a09",9);
-                    get_animal_message = get_animal_message + "台灣小黃鼠狼\n";
+                    get_animal_message = get_animal_message + "果子狸\n";
                     break;
                 case 10:
                     userData.setAnimalCard_10("10");
                     setIntData("a10",10);
-                    get_animal_message = get_animal_message + "果子狸\n";
+                    get_animal_message = get_animal_message + "臺灣獼猴\n";
                     break;
                 case 11:
                     userData.setAnimalCard_11("11");
                     setIntData("a11",11);
-                    get_animal_message = get_animal_message + "臺灣獼猴\n";
+                    get_animal_message = get_animal_message + "抹香鯨\n";
                     break;
                 case 12:
                     userData.setAnimalCard_12("12");
                     setIntData("a12",12);
-                    get_animal_message = get_animal_message + "抹香鯨\n";
+                    get_animal_message = get_animal_message + "黑面琵鷺\n";
                     break;
                 case 13:
                     userData.setAnimalCard_13("13");
                     setIntData("a13",13);
-                    get_animal_message = get_animal_message + "黑面琵鷺\n";
+                    get_animal_message = get_animal_message + "短尾信天翁\n";
                     break;
                 case 14:
                     userData.setAnimalCard_14("14");
                     setIntData("a14",14);
-                    get_animal_message = get_animal_message + "短尾信天翁\n";
+                    get_animal_message = get_animal_message + "藍腹鷳\n";
                     break;
                 case 15:
                     userData.setAnimalCard_15("15");
                     setIntData("a15",15);
-                    get_animal_message = get_animal_message + "藍腹鷳\n";
+                    get_animal_message = get_animal_message + "環頸雉\n";
                     break;
                 case 16:
                     userData.setAnimalCard_16("16");
                     setIntData("a16",16);
-                    get_animal_message = get_animal_message + "環頸雉\n";
+                    get_animal_message = get_animal_message + "蘭嶼角鴞\n";
                     break;
                 case 17:
                     userData.setAnimalCard_17("17");
                     setIntData("a17",17);
-                    get_animal_message = get_animal_message + "蘭嶼角鴞\n";
+                    get_animal_message = get_animal_message + "帝雉\n";
                     break;
                 case 18:
                     userData.setAnimalCard_18("18");
                     setIntData("a18",18);
-                    get_animal_message = get_animal_message + "帝雉\n";
+                    get_animal_message = get_animal_message + "台灣雲豹\n";
                     break;
                 case 19:
                     userData.setAnimalCard_19("19");
                     setIntData("a19",19);
-                    get_animal_message = get_animal_message + "台灣雲豹\n";
+                    get_animal_message = get_animal_message + "臺灣黑熊\n";
                     break;
                 case 20:
                     userData.setAnimalCard_20("20");
                     setIntData("a20",20);
-                    get_animal_message = get_animal_message + "臺灣黑熊\n";
+                    get_animal_message = get_animal_message + "石虎\n" ;
                     break;
             }
             userDataDAO.update(userData);

@@ -31,6 +31,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/selectedText"
             android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:maxLines="20"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
 

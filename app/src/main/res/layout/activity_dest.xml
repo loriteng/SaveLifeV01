@@ -6,7 +6,8 @@
     android:contextClickable="false"
     android:longClickable="false"
     android:gravity="center"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#8dbd87">
 
     <LinearLayout
         android:orientation="horizontal"

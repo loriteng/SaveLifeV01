@@ -45,9 +45,7 @@
         <item name="android:background">@drawable/login</item>
     </style>
     <!-- 一般頁背景 -->
-    <style name="bg101" >
-        <item name="android:background">@drawable/bg101</item>
-    </style>
+
     <!-- 遊戲頁背景 -->
     <style name="game" >
         <item name="android:background">@drawable/game</item>

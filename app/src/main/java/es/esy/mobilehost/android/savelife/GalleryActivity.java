@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -82,26 +81,26 @@ public class GalleryActivity extends MenuActivity {
     public int[] photoList(){
 
         int photoList[] ={
-                getStringData("a01").equals("0") ? R.drawable.galleryback : R.drawable.p0,
-                getStringData("a02").equals("0") ? R.drawable.galleryback : R.drawable.p1,
-                getStringData("a03").equals("0") ? R.drawable.galleryback : R.drawable.p2,
-                getStringData("a04").equals("0") ? R.drawable.galleryback : R.drawable.p3,
-                getStringData("a05").equals("0")? R.drawable.galleryback : R.drawable.p4,
-                getStringData("a06").equals("0") ? R.drawable.galleryback : R.drawable.p5,
-                getStringData("a07").equals("0") ? R.drawable.galleryback : R.drawable.p6,
-                getStringData("a08").equals("0") ? R.drawable.galleryback : R.drawable.p7,
-                getStringData("a09").equals("0") ? R.drawable.galleryback : R.drawable.p8,
-                getStringData("a10").equals("0") ? R.drawable.galleryback : R.drawable.p9,
-                getStringData("a11").equals("0") ? R.drawable.galleryback : R.drawable.p10,
-                getStringData("a12").equals("0")? R.drawable.galleryback : R.drawable.p11,
-                getStringData("a13").equals("0") ? R.drawable.galleryback : R.drawable.p12 ,
-                getStringData("a14").equals("0") ? R.drawable.galleryback : R.drawable.p13,
-                getStringData("a15").equals("0") ? R.drawable.galleryback : R.drawable.p14 ,
-                getStringData("a16").equals("0") ? R.drawable.galleryback : R.drawable.p15,
-                getStringData("a17").equals("0") ? R.drawable.galleryback : R.drawable.p16,
-                getStringData("a18").equals("0") ? R.drawable.galleryback : R.drawable.p17,
-                getStringData("a19").equals("0") ? R.drawable.galleryback : R.drawable.p18,
-                getStringData("a20").equals("0") ? R.drawable.galleryback : R.drawable.p19,
+                getStringData("a01").equals("0") ? R.drawable.galleryback : R.drawable.p1,
+                getStringData("a02").equals("0") ? R.drawable.galleryback : R.drawable.p2,
+                getStringData("a03").equals("0") ? R.drawable.galleryback : R.drawable.p3,
+                getStringData("a04").equals("0") ? R.drawable.galleryback : R.drawable.p4,
+                getStringData("a05").equals("0") ? R.drawable.galleryback : R.drawable.p5,
+                getStringData("a06").equals("0") ? R.drawable.galleryback : R.drawable.p6,
+                getStringData("a07").equals("0") ? R.drawable.galleryback : R.drawable.p7,
+                getStringData("a08").equals("0") ? R.drawable.galleryback : R.drawable.p8,
+                getStringData("a09").equals("0") ? R.drawable.galleryback : R.drawable.p9,
+                getStringData("a10").equals("0") ? R.drawable.galleryback : R.drawable.p10,
+                getStringData("a11").equals("0") ? R.drawable.galleryback : R.drawable.p11,
+                getStringData("a12").equals("0") ? R.drawable.galleryback : R.drawable.p12,
+                getStringData("a13").equals("0") ? R.drawable.galleryback : R.drawable.p13 ,
+                getStringData("a14").equals("0") ? R.drawable.galleryback : R.drawable.p14,
+                getStringData("a15").equals("0") ? R.drawable.galleryback : R.drawable.p15 ,
+                getStringData("a16").equals("0") ? R.drawable.galleryback : R.drawable.p16,
+                getStringData("a17").equals("0") ? R.drawable.galleryback : R.drawable.p17,
+                getStringData("a18").equals("0") ? R.drawable.galleryback : R.drawable.p18,
+                getStringData("a19").equals("0") ? R.drawable.galleryback : R.drawable.p19,
+                getStringData("a20").equals("0") ? R.drawable.galleryback : R.drawable.p20,
         };
         return photoList;
     }

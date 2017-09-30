@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:touchscreenBlocksFocus="false">
+    android:touchscreenBlocksFocus="false"
+    android:background="#8dbd87">
 
     <TableLayout
         android:layout_width="match_parent"
