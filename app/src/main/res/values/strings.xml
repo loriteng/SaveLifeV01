@@ -28,7 +28,7 @@
 
     <string name="main">讓我們來一起拯救瀕臨絕種動物吧!!</string>
     <string name="guest">冒險家：</string>
-    <string name="username">請輸入您的名字</string>
+    <string name="username">請輸入您的名字(最多五個字)</string>
 
     <string name="user01">未創建帳號</string>
     <string name="user02">未創建帳號</string>

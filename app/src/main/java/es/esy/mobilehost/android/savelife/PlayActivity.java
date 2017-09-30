@@ -78,14 +78,15 @@ public class PlayActivity extends AppCompatActivity {
         mainTable = (TableLayout) findViewById(R.id.GameLayout);
         context = mainTable.getContext();
 
-        findViewById(R.id.SetUp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                soundPool.play(sound01,1 ,1, 0, 0, 1); //點擊按鈕出現音效
-                timeset.cancel();
-                winDialog();
-            }
-        });
+//        //一鍵過關
+//        findViewById(R.id.SetUp).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                soundPool.play(sound01,1 ,1, 0, 0, 1); //點擊按鈕出現音效
+//                timeset.cancel();
+//                winDialog();
+//            }
+//        });
 
         // 取得資料庫物件
         userDataDAO = new UserDataDAO(this);
@@ -408,12 +409,15 @@ public class PlayActivity extends AppCompatActivity {
                 switch (which) {
                     case 0:
                         startActivity(new Intent().setClass(PlayActivity.this, DestActivity.class));
+                        finish();
                         break;
                     case 1:
                         startActivity(new Intent().setClass(PlayActivity.this, HomeActivity.class));
+                        finish();
                         break;
                     case 2:
                         startActivity(new Intent().setClass(PlayActivity.this, GalleryActivity.class));
+                        finish();
                         break;
                 }
             }

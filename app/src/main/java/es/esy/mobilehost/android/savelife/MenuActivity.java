@@ -28,6 +28,8 @@ public class MenuActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private int sound01;
 
+    private int i=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,16 @@ public class MenuActivity extends AppCompatActivity {
         sound01 = soundPool.load(this, R.raw.sound01, 0);
     }
 
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        if (i >0) {
+            soundPool.play(sound01,1 ,1, 0, 0, 1); //點擊按鈕出現音效
+        }
+        i=1;
+        return super.onPrepareOptionsMenu(menu);
+    }
     //建立OptionMenu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

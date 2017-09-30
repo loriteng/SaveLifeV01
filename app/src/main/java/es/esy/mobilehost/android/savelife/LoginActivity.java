@@ -67,7 +67,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             case R.id.newUser:
                 if (!mCursor.moveToPosition(2)){
                     startActivity(new Intent().setClass(LoginActivity.this, NewUserActivity.class));
-                    finish();
+                    //finish();
                 }else{
                     Toast.makeText(LoginActivity.this,"帳號已滿",Toast.LENGTH_SHORT).show();
                 }
