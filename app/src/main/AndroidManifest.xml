@@ -19,7 +19,7 @@
         <activity android:name=".DestActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".NewUserActivity"
-            android:theme="@android:style/Theme.Holo.Dialog"/>
+            android:theme="@android:style/Theme.Holo.Light.Dialog"/>
         <activity android:name=".GalleryActivity" />
         <activity android:name=".GalleryDetail" />
         <activity android:name=".MenuActivity" />
