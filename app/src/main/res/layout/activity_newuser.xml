@@ -18,9 +18,8 @@
 
         <TableRow>
             <TextView
-                android:text="帳號名稱"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                />
+                android:text="@string/guest"
+                android:textAppearance="?android:attr/textAppearanceMedium"  />
             <EditText
                 android:id="@+id/username__edit"
                 android:hint="@string/username"

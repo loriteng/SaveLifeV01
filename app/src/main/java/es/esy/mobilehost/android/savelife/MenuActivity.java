@@ -150,7 +150,7 @@ public class MenuActivity extends AppCompatActivity {
 //        SeekBar S2 = (SeekBar) findViewById(R.id.seekBar2);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.button_text7);
+        builder.setTitle(R.string.Bsetup);
         builder.setIcon(android.R.drawable.ic_dialog_info);
         builder.setView(layout);
         builder.setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
