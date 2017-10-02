@@ -11,8 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import es.esy.mobilehost.android.savelife.Data.UserDataDAO;
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
+
 //圖鑑畫面
 public class GalleryActivity extends MenuActivity {
 
@@ -22,6 +25,8 @@ public class GalleryActivity extends MenuActivity {
     UserDataDAO mGDB = new UserDataDAO(this);
     //取得資料庫的指標
     Cursor mCursor = mGDB.getAllCursor();
+    //遊戲音樂
+    private BGM bgm;
 
     //音效播放物件
     private SoundPool soundPool;
@@ -39,6 +44,10 @@ public class GalleryActivity extends MenuActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
+
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
         mCursor.moveToPosition(getDate("id"));
         simpleGrid = (GridView) findViewById(R.id.simpleGridView);
         GalleryAdapter customAdapter = new GalleryAdapter(getApplicationContext(), photoList());
@@ -122,6 +131,27 @@ public class GalleryActivity extends MenuActivity {
         SharedPreferences spref = getApplication().getSharedPreferences(KEY, Context.MODE_PRIVATE);
         String strValue = spref.getString(key, null);
         return strValue;
+    }
+
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        super.onPause();
+    }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        super.onRestart();
     }
 
 }

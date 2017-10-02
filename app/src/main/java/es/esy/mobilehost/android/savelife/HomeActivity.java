@@ -15,10 +15,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
+
 //遊戲首頁
 public class HomeActivity extends MenuActivity {
-    //mediaPlayer物件
-    private MediaPlayer mediaPlayer;
+    //遊戲音樂
+    private BGM bgm;
     //xml的檔名
     public static final String KEY = "DataSet";
 
@@ -31,6 +33,10 @@ public class HomeActivity extends MenuActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
+
         //音效檔準備
         soundPool = new SoundPool(4, AudioManager.STREAM_SYSTEM,0);
         sound01 = soundPool.load(this, R.raw.sound01, 0);
@@ -38,16 +44,6 @@ public class HomeActivity extends MenuActivity {
         //帳號名稱設定
         TextView textView = (TextView) findViewById(R.id.showName);
         textView.setText("冒險家:" + getData("name"));
-
-        //背景音樂播放
-        mediaPlayer = MediaPlayer.create(this, R.raw.nothing_on_you);
-        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener(){
-                @Override
-                public void onPrepared(MediaPlayer mediaPlayer) {
-                    mediaPlayer.start();
-                }
-        });
-
 
         //進入遊戲
         findViewById(R.id.BStart).setOnClickListener(new View.OnClickListener() {
@@ -75,5 +71,26 @@ public class HomeActivity extends MenuActivity {
         SharedPreferences spref = getApplication().getSharedPreferences(KEY, Context.MODE_PRIVATE);
         String strValue = spref.getString(key, null);
         return strValue;
+    }
+
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        super.onPause();
+    }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        super.onRestart();
     }
 }

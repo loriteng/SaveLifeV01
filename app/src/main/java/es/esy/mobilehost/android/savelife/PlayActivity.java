@@ -32,6 +32,7 @@ import java.util.TimerTask;
 import es.esy.mobilehost.android.savelife.Data.UserData;
 import es.esy.mobilehost.android.savelife.Data.UserDataDAO;
 import es.esy.mobilehost.android.savelife.PlayGame.AnimalCard;
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 import es.esy.mobilehost.android.savelife.PlayGame.GameTime;
 
 
@@ -60,6 +61,8 @@ public class PlayActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private int gameeffect; //遊戲卡牌點集音效
     private int sound01;
+    //遊戲音樂
+    private BGM bgm;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,10 @@ public class PlayActivity extends AppCompatActivity {
         handler = new UpdateCardsHandler();
         loadImages();
         setContentView(R.layout.activity_play);
+
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
 
         //音效檔準備
         soundPool = new SoundPool(4, AudioManager.STREAM_SYSTEM,0);
@@ -343,18 +350,27 @@ public class PlayActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    //離開遊戲畫面時呼叫timeset.pause()暫停時間
-    @Override
-    protected void onPause() {
-        super.onPause();
-        timeset.pause();
-    }
 
     //回到遊戲畫面時呼叫timeset.pause()暫停時間
     @Override
     protected void onRestart() {
         super.onRestart();
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
         timeset.resume();
+    }
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        timeset.pause();
+        super.onPause();
     }
 
     //勝利結算訊息

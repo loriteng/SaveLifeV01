@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Environment;
@@ -24,6 +25,7 @@ import java.io.IOException;
 
 import es.esy.mobilehost.android.savelife.Data.UserData;
 import es.esy.mobilehost.android.savelife.Data.UserDataDAO;
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 
 //遊戲登入畫面
 public class LoginActivity extends Activity implements View.OnClickListener{
@@ -31,6 +33,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private UserDataDAO userDataDAO;
     //xml檔名稱
     private static final String KEY = "DataSet";
+    //遊戲音樂
+    private BGM bgm;
 
     //音效播放物件
     private SoundPool soundPool;
@@ -40,6 +44,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        try {
+            if(bgm.getMediaPlayer() == null) {
+                bgm.setMediaPlayer(MediaPlayer.create(this, R.raw.nothing_on_you));
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
 
         //音效檔準備
         soundPool = new SoundPool(4, AudioManager.STREAM_SYSTEM,0);
@@ -253,5 +266,27 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         String strValue = spref.getString(key, null);
         return strValue;
     }
+
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        super.onPause();
+    }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        super.onRestart();
+    }
+
 
 }

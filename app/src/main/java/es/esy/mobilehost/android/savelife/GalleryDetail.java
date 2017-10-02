@@ -6,12 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
+
 //動物圖鑑詳細資料的畫面
 public class GalleryDetail extends AppCompatActivity {
     //動物圖鑑的圖片
     ImageView selectedImage;
     //動物圖鑑文字資料
     TextView selectedText;
+    //遊戲音樂
+    private BGM bgm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

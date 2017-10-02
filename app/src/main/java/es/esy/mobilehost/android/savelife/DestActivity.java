@@ -12,11 +12,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
+
 //難度設定頁面
 public class DestActivity extends AppCompatActivity implements View.OnClickListener{
     private Context context;
     public static final String KEY = "DataSet";
-
+    //遊戲音樂
+    private BGM bgm;
     //音效播放物件
     private SoundPool soundPool;
     private int sound01;
@@ -26,7 +29,9 @@ public class DestActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dest);
         context = this;
-
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
         //音效檔準備
         soundPool = new SoundPool(4, AudioManager.STREAM_SYSTEM,0);
         sound01 = soundPool.load(this, R.raw.sound01, 0);
@@ -128,6 +133,27 @@ public class DestActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences spref = getApplication().getSharedPreferences(KEY, Context.MODE_PRIVATE);
         String strValue = spref.getString(key, null);
         return strValue;
+    }
+
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        super.onPause();
+    }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        super.onRestart();
     }
 
 }

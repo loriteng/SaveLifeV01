@@ -3,6 +3,7 @@ package es.esy.mobilehost.android.savelife;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +12,14 @@ import android.widget.Toast;
 
 import es.esy.mobilehost.android.savelife.Data.UserData;
 import es.esy.mobilehost.android.savelife.Data.UserDataDAO;
+import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 
 
 public class NewUserActivity extends Activity {
 
     private EditText newUersname_edit;
+    //遊戲音樂
+    private BGM bgm;
 
     // 資料庫物件
     private UserDataDAO userDataDAO;
@@ -25,6 +29,9 @@ public class NewUserActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newuser);
 
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
         // 自定Layout
         LayoutInflater inflater = getLayoutInflater();
         // 將 xml layout 轉換成視圖 View 物件
@@ -56,6 +63,19 @@ public class NewUserActivity extends Activity {
         finish();
     }
 
+
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK) { // 攔截返回鍵
+//            Intent intentHome = new Intent(Intent.ACTION_MAIN);
+//            intentHome.addCategory(Intent.CATEGORY_HOME);
+//            intentHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intentHome);
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+
+
     //創件新帳號資料
     public void NewUersData(){
         String newUersname = newUersname_edit.getText().toString();
@@ -85,4 +105,26 @@ public class NewUserActivity extends Activity {
         // 新增
         userDataDAO.insert(userData);
     }
+
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+        super.onPause();
+    }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+        super.onRestart();
+    }
+
 }
