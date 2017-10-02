@@ -63,7 +63,7 @@ public class PlayActivity extends AppCompatActivity {
     private int sound01;
     //遊戲音樂
     private BGM bgm;
-
+//
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
