@@ -28,7 +28,7 @@
         <item name="titleTextStyle">@style/MyActionBarTitle</item>
     </style>
 
-    <!-- MyActionBa 左方程式名稱字形顏色-->
+    <!-- MyActionBar 左方程式名稱字形顏色-->
     <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">#b5ff7d</item>
     </style>

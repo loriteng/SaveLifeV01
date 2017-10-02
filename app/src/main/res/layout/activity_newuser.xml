@@ -14,14 +14,12 @@
         android:paddingRight="4dp"
         android:paddingBottom="1dp"
         android:stretchColumns="1"
-        android:layout_weight="0.04"
-        android:background="@drawable/retangle_drawable">
+        android:layout_weight="0.04">
 
         <TableRow>
             <TextView
-                android:text="帳號名稱"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                />
+                android:text="@string/guest"
+                android:textAppearance="?android:attr/textAppearanceMedium"  />
             <EditText
                 android:id="@+id/username__edit"
                 android:hint="@string/username"
@@ -39,22 +37,19 @@
         android:paddingTop="5dp"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:paddingBottom="1dp"
-        android:background="@drawable/retangle_drawable">
+        android:paddingBottom="1dp">
         <Button
             android:id="@+id/bcancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@android:string/cancel"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:onClick="clickCancel"  />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@android:string/ok"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:onClick="clickOk"
             android:id="@+id/bok" />
     </LinearLayout>
