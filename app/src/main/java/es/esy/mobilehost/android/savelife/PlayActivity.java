@@ -258,7 +258,7 @@ public class PlayActivity extends AppCompatActivity {
             if (cards[seconedCard.x][seconedCard.y] == cards[firstCard.x][firstCard.y]) {
                 firstCard.button.setEnabled(false);
                 seconedCard.button.setEnabled(false);
-                Toast.makeText(getApplicationContext(), "配對成功！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "配對成功！", Toast.LENGTH_SHORT).show();
                 pairCount++;
                 if (pairCount >= items) {
                     timeset.cancel();
@@ -270,7 +270,7 @@ public class PlayActivity extends AppCompatActivity {
             else {
                 seconedCard.button.setBackgroundDrawable(backImage);
                 firstCard.button.setBackgroundDrawable(backImage);
-                Toast.makeText(getApplicationContext(), "配對錯誤...", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "配對錯誤...", Toast.LENGTH_SHORT).show();
             }
             firstCard = null;
             seconedCard = null;
