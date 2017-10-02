@@ -270,6 +270,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     //離開遊戲畫面時呼叫timeset.pause()暫停時間
     @Override
     protected void onPause() {
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser01), 0);
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser02), 1);
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser03), 2);
         try {
             if(bgm == null) {
                 //bgm = new BGM();
@@ -281,6 +284,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     //回到遊戲畫面時呼叫timeset.pause()暫停時間
     @Override
     protected void onRestart() {
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser01), 0);
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser02), 1);
+        userDataDAO.rgetnameData((RadioButton)findViewById(R.id.rBUser03), 2);
         try {
             if(bgm == null) {
                 bgm.getMediaPlayer().start();
