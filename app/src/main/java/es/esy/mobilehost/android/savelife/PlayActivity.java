@@ -558,7 +558,7 @@ public class PlayActivity extends AppCompatActivity {
                 case 10:
                     userData.setAnimalCard_10("10");
                     setIntData("a10",10);
-                    get_animal_message = get_animal_message + "臺灣獼猴\n";
+                    get_animal_message = get_animal_message + "藍腳鰹鳥\n";
                     break;
                 case 11:
                     userData.setAnimalCard_11("11");
@@ -610,6 +610,7 @@ public class PlayActivity extends AppCompatActivity {
                     setIntData("a20",20);
                     get_animal_message = get_animal_message + "石虎\n" ;
                     break;
+
             }
             userDataDAO.update(userData);
             UpdatesetUserData(getDate("Pid"));
