@@ -63,17 +63,16 @@ public class PlayActivity extends AppCompatActivity {
     private int sound01;
     //遊戲音樂
     private BGM bgm;
-
+//
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        handler = new UpdateCardsHandler();
-        loadImages();
         setContentView(R.layout.activity_play);
-
         if(!bgm.getMediaPlayer().isPlaying()){
             bgm.getMediaPlayer().start();
         }
+        handler = new UpdateCardsHandler();
+        loadImages();
 
         //音效檔準備
         soundPool = new SoundPool(4, AudioManager.STREAM_SYSTEM,0);
