@@ -47,7 +47,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         try {
             if(bgm.getMediaPlayer() == null) {
-                bgm.setMediaPlayer(MediaPlayer.create(this, R.raw.nothing_on_you));
+                bgm.setMediaPlayer(MediaPlayer.create(this, R.raw.try_everything));
                 bgm.getMediaPlayer().start();
             }} catch (Exception e) {}
         if(!bgm.getMediaPlayer().isPlaying()){

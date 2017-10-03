@@ -84,8 +84,8 @@ public class PlayActivity extends AppCompatActivity {
         mainTable = (TableLayout) findViewById(R.id.GameLayout);
         context = mainTable.getContext();
 
-//        //一鍵過關
-//        findViewById(R.id.SetUp).setOnClickListener(new View.OnClickListener() {
+        //一鍵過關
+//        findViewById(R.id.Clear).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
 //                soundPool.play(sound01,1 ,1, 0, 0, 1); //點擊按鈕出現音效

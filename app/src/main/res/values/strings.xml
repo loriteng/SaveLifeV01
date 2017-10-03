@@ -12,6 +12,7 @@
     <!--activity_play.xml -->
     <!--<string name="UserName">冒險者</string>-->
     <!--<string name="SetUp">設定</string>-->
+    <!--activity_play.xml  一鍵過關-->
     <!--<string name="Clear">過關</string>-->
     <!--<string name="reset">重新遊戲</string>-->
 
