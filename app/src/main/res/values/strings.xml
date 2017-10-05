@@ -128,6 +128,8 @@
     <!--<string name="menu_reset">資料重置</string>-->
     <string name="menu_copyright">資料出處</string>
     <string name="menu_developer">製作團隊</string>
+    <!--menu_2main.xml -->
+    <string name="menu_bkhome">回到首頁</string>
 
     <!--<string name="reset_info">資料重置</string>-->
 

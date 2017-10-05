@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +18,7 @@ import es.esy.mobilehost.android.savelife.Data.UserDataDAO;
 import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 
 //圖鑑畫面
-public class GalleryActivity extends MenuActivity {
+public class GalleryActivity extends Menu2Activity {
 
     private GridView simpleGrid;
     public static final String KEY = "DataSet";

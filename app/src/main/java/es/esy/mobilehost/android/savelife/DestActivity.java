@@ -15,7 +15,7 @@ import android.widget.Toast;
 import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 
 //難度設定頁面
-public class DestActivity extends AppCompatActivity implements View.OnClickListener{
+public class DestActivity extends MenuActivity implements View.OnClickListener{
     private Context context;
     public static final String KEY = "DataSet";
     //遊戲音樂
