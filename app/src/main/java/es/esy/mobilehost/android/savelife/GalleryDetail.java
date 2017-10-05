@@ -22,6 +22,10 @@ public class GalleryDetail extends Menu2Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallerydetail);
 
+        if(!bgm.getMediaPlayer().isPlaying()){
+            bgm.getMediaPlayer().start();
+        }
+
         selectedImage = (ImageView) findViewById(R.id.selectedImage); // init a ImageView
         Intent intent = getIntent(); // get Intent which we set from Previous Activity
         selectedImage.setImageResource(intent.getIntExtra("image", 0)); // get image from Intent and set it in ImageView
@@ -30,4 +34,25 @@ public class GalleryDetail extends Menu2Activity {
         selectedText.setText(intent.getIntExtra("text",0));
 
     }
+
+    //回到遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        try {
+            if(bgm == null) {
+                bgm.getMediaPlayer().start();
+            }} catch (Exception e) {}
+    }
+    //離開遊戲畫面時呼叫timeset.pause()暫停時間
+    @Override
+    protected void onPause() {
+        super.onPause();
+        try {
+            if(bgm == null) {
+                //bgm = new BGM();
+                bgm.getMediaPlayer().pause();
+            }} catch (Exception e) {}
+    }
+
 }

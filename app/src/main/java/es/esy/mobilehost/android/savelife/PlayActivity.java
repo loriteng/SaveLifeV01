@@ -286,12 +286,14 @@ public class PlayActivity extends AppCompatActivity {
 
     private static final int	MenuGroupID = 0;
     private static final int	MenuItemID1 = 0;
+    private static final int	MenuItemID2 = 1;
 
     //右上角MENU追加內容
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.add(MenuGroupID, MenuItemID1, Menu.NONE, "重新遊戲");
+        menu.add(MenuGroupID, MenuItemID2, Menu.NONE, "退出遊戲");
         return true;
     }
 
@@ -300,6 +302,10 @@ public class PlayActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MenuItemID1: // 重新遊戲
+                finish();
+                startActivity(new Intent().setClass(PlayActivity.this, PlayActivity.class));
+                return true;
+            case MenuItemID2: // 退出遊戲
                 this.finish();
                 return true;
         }
@@ -348,7 +354,6 @@ public class PlayActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 
     //回到遊戲畫面時呼叫timeset.pause()暫停時間
     @Override

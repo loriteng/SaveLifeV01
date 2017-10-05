@@ -28,5 +28,6 @@
         <activity android:name=".GalleryDetail" android:screenOrientation="portrait" />
         <activity android:name=".MenuActivity" android:screenOrientation="portrait" />
     </application>
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 </manifest>
