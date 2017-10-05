@@ -10,7 +10,7 @@ import android.widget.TextView;
 import es.esy.mobilehost.android.savelife.PlayGame.BGM;
 
 //動物圖鑑詳細資料的畫面
-public class GalleryDetail extends AppCompatActivity {
+public class GalleryDetail extends Menu2Activity {
     //動物圖鑑的圖片
     ImageView selectedImage;
     //動物圖鑑文字資料
