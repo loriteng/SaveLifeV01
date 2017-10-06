@@ -6,7 +6,7 @@
     <!--<string name="LvSet">難度選擇</string>-->
     <!--<string name="TimeSet">時間選擇</string>-->
     <!--activity_dest.xml -->
-    <string name="DCBtton">難度設定確認</string>
+    <string name="DCBtton">展開冒險</string>
     <!--activity_dest.xml -->
     <string name="BHButton">返回首頁</string>
     <!--activity_play.xml -->
