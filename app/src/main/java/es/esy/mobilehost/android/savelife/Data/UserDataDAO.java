@@ -57,7 +57,7 @@ public class UserDataDAO extends Activity {
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    USER_NAME + " REAL NOT NULL, " +
+                    USER_NAME + ", " +
                     ANIMAL_01 + " REAL NOT NULL, " + ANIMAL_02 + " REAL NOT NULL, " + ANIMAL_03 + " REAL NOT NULL, " + ANIMAL_04 + " REAL NOT NULL, " +
                     ANIMAL_05 + " REAL NOT NULL, " + ANIMAL_06 + " REAL NOT NULL, " + ANIMAL_07 + " REAL NOT NULL, " + ANIMAL_08 + " REAL NOT NULL, " +
                     ANIMAL_09 + " REAL NOT NULL, " + ANIMAL_10 + " REAL NOT NULL, " + ANIMAL_11 + " REAL NOT NULL, " + ANIMAL_12 + " REAL NOT NULL, " +

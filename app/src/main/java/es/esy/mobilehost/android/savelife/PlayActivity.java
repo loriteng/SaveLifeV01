@@ -126,25 +126,6 @@ public class PlayActivity extends AppCompatActivity {
 
     }
 
-    //讀取卡牌圖樣
-    private void loadImages() {
-        images = new ArrayList<Drawable>();
-        images.add(getResources().getDrawable(R.drawable.item01));
-        images.add(getResources().getDrawable(R.drawable.item02));
-        images.add(getResources().getDrawable(R.drawable.item03));
-        images.add(getResources().getDrawable(R.drawable.item04));
-        images.add(getResources().getDrawable(R.drawable.item05));
-        images.add(getResources().getDrawable(R.drawable.item06));
-        images.add(getResources().getDrawable(R.drawable.item07));
-        images.add(getResources().getDrawable(R.drawable.item08));
-        images.add(getResources().getDrawable(R.drawable.item09));
-        images.add(getResources().getDrawable(R.drawable.item10));
-        images.add(getResources().getDrawable(R.drawable.item11));
-        images.add(getResources().getDrawable(R.drawable.item12));
-        images.add(getResources().getDrawable(R.drawable.item13));
-        images.add(getResources().getDrawable(R.drawable.item14));
-    }
-
     //讀取卡牌
     private void loadCards(int rowCount,int columeCount) {
         try {
@@ -182,6 +163,25 @@ public class PlayActivity extends AppCompatActivity {
         }
         catch (Exception e) {
         }
+    }
+
+    //讀取卡牌圖樣
+    private void loadImages() {
+        images = new ArrayList<Drawable>();
+        images.add(getResources().getDrawable(R.drawable.item01));
+        images.add(getResources().getDrawable(R.drawable.item02));
+        images.add(getResources().getDrawable(R.drawable.item03));
+        images.add(getResources().getDrawable(R.drawable.item04));
+        images.add(getResources().getDrawable(R.drawable.item05));
+        images.add(getResources().getDrawable(R.drawable.item06));
+        images.add(getResources().getDrawable(R.drawable.item07));
+        images.add(getResources().getDrawable(R.drawable.item08));
+        images.add(getResources().getDrawable(R.drawable.item09));
+        images.add(getResources().getDrawable(R.drawable.item10));
+        images.add(getResources().getDrawable(R.drawable.item11));
+        images.add(getResources().getDrawable(R.drawable.item12));
+        images.add(getResources().getDrawable(R.drawable.item13));
+        images.add(getResources().getDrawable(R.drawable.item14));
     }
 
     //生成遊戲畫面
