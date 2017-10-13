@@ -84,7 +84,7 @@ public class PlayActivity extends AppCompatActivity {
         mainTable = (TableLayout) findViewById(R.id.GameLayout);
         context = mainTable.getContext();
 
-        //一鍵過關
+        //一鍵過關按鈕
 //        findViewById(R.id.Clear).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
