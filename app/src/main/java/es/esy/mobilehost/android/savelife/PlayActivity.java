@@ -377,40 +377,48 @@ public class PlayActivity extends AppCompatActivity {
         super.onPause();
     }
 
-    //勝利結算訊息
+
+//勝利結算訊息
     public void winDialog() {
         animalsave();
         AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
-        builder1.setTitle("開啟以下圖鑑:");
-        builder1.setMessage(get_animal_message);
-        builder1.setIcon(android.R.drawable.btn_star_big_on);
-        String option2[] = {"繼續遊戲", "回首頁", "前往圖鑑"};
-        AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
-        builder2.setTitle("勝利");
-        builder2.setCancelable(false);
-        builder2.setIcon(android.R.drawable.btn_star_big_on);
-        // 列表選項（注意：不可以與builder.setMessage()同時調用）
-        builder2.setItems(option2, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                soundPool.play(gameeffect,1 ,1, 0, 0, 1); //點擊按鈕出現音效
-                switch (which) {
-                    case 0:
-                        startActivity(new Intent().setClass(PlayActivity.this, DestActivity.class));
-                        finish();
-                        break;
-                    case 1:
-                        startActivity(new Intent().setClass(PlayActivity.this, HomeActivity.class));
-                        finish();
-                        break;
-                    case 2:
-                        startActivity(new Intent().setClass(PlayActivity.this, GalleryActivity.class));
-                        finish();
-                        break;
-                }
-            }
-        });
-        builder2.create().show();
+        builder1.setIcon(android.R.drawable.btn_star_big_on)
+                .setTitle("開啟以下圖鑑")
+                .setMessage(get_animal_message)
+                .setCancelable(false)
+                .setNegativeButton("確定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String option2[] = {"繼續遊戲", "回首頁", "前往圖鑑"};
+                                AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
+                                builder2.setTitle("勝利");
+                                builder2.setCancelable(false);
+                                builder2.setIcon(android.R.drawable.btn_star_big_on);
+                                // 列表選項（注意：不可以與builder.setMessage()同時調用）
+                                builder2.setItems(option2, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        soundPool.play(gameeffect,1 ,1, 0, 0, 1); //點擊按鈕出現音效
+                                        switch (which) {
+                                            case 0:
+                                                startActivity(new Intent().setClass(PlayActivity.this, DestActivity.class));
+                                                finish();
+                                                break;
+                                            case 1:
+                                                startActivity(new Intent().setClass(PlayActivity.this, HomeActivity.class));
+                                                finish();
+                                                break;
+                                            case 2:
+                                                startActivity(new Intent().setClass(PlayActivity.this, GalleryActivity.class));
+                                                finish();
+                                                break;
+                                        }
+                                    }
+                                });
+                                builder2.create().show();
+                            }
+                        });
         builder1.create().show();
     }
 

@@ -13,7 +13,7 @@
     <!--<string name="UserName">冒險者</string>-->
     <!--<string name="SetUp">設定</string>-->
     <!--activity_play.xml  一鍵過關-->
-    <!--<string name="Clear">過關</string>-->
+    <string name="Clear">go</string>
     <!--<string name="reset">重新遊戲</string>-->
 
     <!--<string name="exit">太可惜了! 就差那麼一點,再嘗試看看吧!</string>-->
